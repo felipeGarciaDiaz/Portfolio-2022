@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import Helmet from "react-helmet";
-import AOS from "aos";
-import "aos/dist/aos.cjs";
 import socket from "./socket";
 import Socials from "./Socials";
+import ContentBox from "./ContentBox";
+import Tools from "./Tools";
 //dependencies and other components we have
 function Main(props) {
 	//init hooks
-	AOS.init();
+
 	let intro = useRef("FELIPE GARCIA DIAZ");
 	let [climber, setClimber] = useState(0);
 	let [descClimber, setDescClimber] = useState(0);
@@ -15,6 +15,7 @@ function Main(props) {
 	let tagline = useRef("Web Developer & Security Enthusiast");
 	let displayIcon = useRef("hidden");
 	let [buttonOpacity, changeButtonOpacity] = useState(0);
+
 	const socialMedia = [
 		{
 			link: "https://www.linkedin.com/in/felipe-garcia-diaz-a91106211/",
@@ -45,7 +46,7 @@ function Main(props) {
 				console.log("going", climber);
 				//increment and type out my name using the typing animation
 			}
-		}, 100);
+		}, 75);
 		return () => {
 			//honestly dont touch this, its really delicate and if we put the wrong code here we can create bugs on the site
 			clearInterval(genName);
@@ -63,7 +64,7 @@ function Main(props) {
 					clearInterval(scaleOpacity);
 				} else {
 					changeOpacity((val) => val + 0.0035);
-					changeButtonOpacity((val) => val + 0.0015);
+					changeButtonOpacity((val) => val + 0.0025);
 					console.log("test", opacitySet);
 					//adding the opacity for the icon on top and button on bottom, this seems to be the most aesthetic result between the color difference
 				}
@@ -86,45 +87,40 @@ function Main(props) {
 					<h1 id='header-title' className='center-align'>
 						{intro.current.substring(0, climber)}
 					</h1>
-					<h4
-						id='desc'
-						className='center-align'
-						style={
-							{
-								/*opacity: opacitySet*/
-							}
-						}
-					>
+					<h4 id='desc' className='center-align'>
 						{tagline.current.substring(0, climber)}
 					</h4>
-					<React.Fragment>
-						<div className='container'>
-							<div className='row'>
-								<div id='socials' className='center-align'>
-									{socialMedia.map((socials) => (
-										<Socials
-											getOpacity={opacitySet}
-											getVisibility={displayIcon.current}
-											link={socials.link}
-											icon={socials.icon}
-										/>
-									))}
-								</div>
+					<div className='container' id='social-row'>
+						<div className='row'>
+							<div id='socials social-row' className='center-align'>
+								{socialMedia.map((socials) => (
+									<Socials
+										getOpacity={opacitySet}
+										getVisibility={displayIcon.current}
+										link={socials.link}
+										icon={socials.icon}
+									/>
+								))}
 							</div>
 						</div>
-					</React.Fragment>
+					</div>
 
 					<p className='center-align'>
-						<button
+						<a
 							id='header-button'
 							className='btn center-align'
 							style={{ opacity: buttonOpacity, visibility: displayIcon.current }}
+							href='#about'
 						>
 							Lets Explore!
-						</button>
+						</a>
 					</p>
 				</div>
-				<h1>test</h1>
+
+				<div id='about'>
+					<ContentBox />
+					<Tools />
+				</div>
 			</div>
 		</React.Fragment>
 	);

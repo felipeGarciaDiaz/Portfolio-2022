@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital@1&family=Raleway:wght@100&display=swap');
 @media (max-width:600px){
     body {
         overflow-x: hidden;
@@ -24,6 +22,9 @@
     #socials {
         padding-top: 5%;
     }
+    #skills-bar {
+        padding-top: 10%;
+    }
 }
 
 
@@ -44,7 +45,8 @@
     }
     #socials {
         padding-top: 3%;
-        overflow-y: hidden;
+        overflow-y:hidden;
+        height: calc(100% - 30px);
 
     }
     #header-button {
@@ -60,15 +62,13 @@ html, body, h1, h2, h3, h4, h5, h6, div {
     padding: 0;
     border: 0;
     margin: 0;
+    scroll-behavior: smooth;
   }
 
 body {
     background-color: #19213d;
     overflow-x: hidden;
 
-}
-.row {
-    overflow-x: hidden;
 }
 #header-title{
     font-family: 'Raleway', sans-serif;
@@ -95,6 +95,11 @@ body {
 
 }
 
+#social-row {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
 
 #header-button {
     margin-top: 3%;
@@ -104,6 +109,56 @@ body {
     font-weight: bolder;
     text-align: center; 
     margin: auto;
+    padding: 1% 3% 1% 3%;
+    box-sizing: content-box;
 
 
+}
+#header-button:hover {
+    animation: shake 1.2s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-2deg); }
+  20% { transform: translate(-3px, 0px) rotate(2deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(2deg); }
+  50% { transform: translate(-1px, 2px) rotate(-2deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+}
+
+
+#content-box {
+
+    background-color: #101629;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 5px 5px #090d1a;
+
+}
+#content-title, #libs-title {
+    padding-top: 2%;
+    color: #FFC600;
+}
+#content-desc, #libs-desc, #tools-desc {
+    font-size: 150%;
+    font-family: 'Finlandica', sans-serif;
+}
+#profile {
+    height: 60%;
+    width: 60%;
+    border-radius: 25%;
+}
+
+#content-title-me, #tools-title  {
+    color: #ff008c;
+}
+#box {
+
+    background-color: #101629;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 5px 5px #090d1a;
 }
