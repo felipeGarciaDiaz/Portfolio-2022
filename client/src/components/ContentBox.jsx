@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SkillData } from "./media/resources/data.js";
-import Bounce from "react-reveal/Bounce";
 import BarChart from "./BarChart";
 function ContentBox(props) {
 	const [skillData, setSkillData] = useState({
@@ -16,9 +16,55 @@ function ContentBox(props) {
 			display: false,
 		},
 	});
+	/*let size = useRef("20");
+
+	//init hooks
+		useEffect(() => {
+		//creats a js method to detect screen size and updates the icons depending on the size.
+		if (window.innerWidth > 500) {
+			size.current = 50;
+		} else {
+			size.current = 25;
+		}
+	}, [size]);*/
 
 	return (
 		<React.Fragment>
+			<div className='row'>
+				{(() => {
+					//								<FontAwesomeIcon icon='fa-solid fa-arrow-turn-down' />{" "}
+
+					if (window.innerWidth > 500 && props.showInfo === "arrow") {
+						return <div id='show-projects' className='col s12 m3 l3'></div>;
+					}
+				})()}
+				<div id='content-box' className={props.cols}>
+					{props.htmlMarkupCode}
+				</div>
+				{props.showInfo === "charts" && (
+					<div className='col s12 m7 l7 xl7' id='skills-bar'>
+						<BarChart chartData={skillData} />
+					</div>
+				)}
+
+				{(() => {
+					if (window.innerWidth < 500 && props.showInfo === "arrow") {
+						return (
+							<div id='show-projects' className='col s12 m12 l12'>
+								s{" "}
+							</div>
+						);
+					}
+				})()}
+			</div>
+		</React.Fragment>
+	);
+}
+
+export default ContentBox;
+
+/*
+
 			<div className='row'>
 				<Bounce right>
 					<div id='content-box' className='col s12 m5 l5 xl5'>
@@ -35,13 +81,7 @@ function ContentBox(props) {
 						</p>
 					</div>
 
-					<div className='col s12 m7 l7 xl7' id='skills-bar'>
-						<BarChart chartData={skillData} />
-					</div>
+					
 				</Bounce>
 			</div>
-		</React.Fragment>
-	);
-}
-
-export default ContentBox;
+*/

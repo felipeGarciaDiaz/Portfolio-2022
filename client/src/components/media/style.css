@@ -155,10 +155,9 @@ body {
 #content-title-me, #tools-title  {
     color: #ff008c;
 }
-#box {
 
-    background-color: #101629;
-    color: #ffffff;
-    font-family: 'Raleway', sans-serif;
-    box-shadow: 5px 5px #090d1a;
+#show-projects {
+    background-color: #FFFFFF;
+    color: #333333;
+    padding: 10% 10% 10% 10%;
 }
