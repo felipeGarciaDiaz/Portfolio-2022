@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Helmet from "react-helmet";
-import Bounce from "react-reveal/Bounce";
-
 import socket from "./socket";
 import Socials from "./Socials";
-import ContentBox from "./ContentBox";
-import Tools from "./Tools";
-//dependencies and other components we have
+import ProjectsBody from "./ProjectsBody";
+import ContentBody from "./ContentBody";
+import Contact from "./Contact";
 function Main(props) {
 	//init hooks
 
@@ -48,7 +46,7 @@ function Main(props) {
 				console.log("going", climber);
 				//increment and type out my name using the typing animation
 			}
-		}, 75);
+		}, 35);
 		return () => {
 			//honestly dont touch this, its really delicate and if we put the wrong code here we can create bugs on the site
 			clearInterval(genName);
@@ -65,8 +63,8 @@ function Main(props) {
 					//clears the interval once we check that opacity for the icons and buttons have reached 1
 					clearInterval(scaleOpacity);
 				} else {
-					changeOpacity((val) => val + 0.0035);
-					changeButtonOpacity((val) => val + 0.0025);
+					changeOpacity((val) => val + 0.015); //0.0035
+					changeButtonOpacity((val) => val + 0.009); //0.0025
 					console.log("test", opacitySet);
 					//adding the opacity for the icon on top and button on bottom, this seems to be the most aesthetic result between the color difference
 				}
@@ -118,52 +116,12 @@ function Main(props) {
 						</a>
 					</p>
 				</div>
-
-				<div id='about'>
-					<Bounce right>
-						<ContentBox
-							cols={"col s12 m5 l5 xl5"}
-							showInfo='charts'
-							htmlMarkupCode={
-								<>
-									<div>
-										<h1 id='content-title'>
-											About <span id='content-title-me'>Me</span>
-										</h1>
-										<p id='content-desc'>
-											I've had a passion for computers ever since I was 12 and
-											decided to create my own server. Since then I've become
-											someone who can create anything they want in the web. My
-											experience with Web-App Development combined with my
-											education in Cyber Security allows me to create secure,
-											professional, and aesthetic looking applications for
-											personal and enterprise use.
-										</p>
-									</div>
-								</>
-							}
-						/>
-					</Bounce>
-
-					<Bounce left>
-						<ContentBox
-							cols={"col s12 m9 l9"}
-							showInfo='arrow'
-							htmlMarkupCode={
-								<>
-									<h2 id='libs-title'>Libraries:</h2>
-									<p id='libs-desc'>
-										Phaser 3, ChartJS, ExpressJS, Socket.io, Bootstrap,
-										MaterialUI, Tailwind{" "}
-									</p>
-									<h2 id='tools-title'>Tools:</h2>
-									<p id='tools-desc'>
-										Git, Webpack, Bash/CLI, VSCode, Vim, Linux
-									</p>
-								</>
-							}
-						/>
-					</Bounce>
+				<ContentBody />
+				<div id='projects'>
+					<ProjectsBody />
+				</div>
+				<div id='contact'>
+					<Contact />
 				</div>
 			</div>
 		</React.Fragment>
