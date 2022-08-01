@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SkillData } from "./media/resources/data.js";
 import BarChart from "./BarChart";
 function ContentBox(props) {
@@ -21,7 +20,6 @@ function ContentBox(props) {
 		<React.Fragment>
 			<div className='row'>
 				{(() => {
-					//								<FontAwesomeIcon icon='fa-solid fa-arrow-turn-down' />{" "}
 					if (window.innerWidth > 500 && props.showInfo === "arrow") {
 						return (
 							<div id='show-projects' className='col s12 m3 l3'>

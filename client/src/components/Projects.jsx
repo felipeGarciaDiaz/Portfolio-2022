@@ -13,12 +13,15 @@ function Projects(props) {
 						alt='project logo'
 					/>
 					<div id='links'>
-						<h3>
+						<h3 id='code-info'>
 							<a id='project-code' href={props.git}>
 								Github
 							</a>
 						</h3>
-						<h3>
+						<h3 id='code-info' className='inline-spacer'>
+							&nbsp;&#187;&nbsp;
+						</h3>
+						<h3 id='code-info'>
 							<a id='project-link' href={props.link}>
 								Project
 							</a>

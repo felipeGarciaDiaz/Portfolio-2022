@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Helmet from "react-helmet";
-import socket from "./socket";
 import Socials from "./Socials";
 import ProjectsBody from "./ProjectsBody";
 import ContentBody from "./ContentBody";
 import Contact from "./Contact";
+import Footer from "./Footer";
 function Main(props) {
 	//init hooks
 
@@ -30,7 +30,7 @@ function Main(props) {
 			icon: "youtube",
 		},
 		{
-			link: "mailto:felipedevsec@gmail.com?subject=Felipe%20GD%20--%20Request%20To%20Contact",
+			link: "/resume",
 			icon: "email",
 		},
 	];
@@ -43,7 +43,6 @@ function Main(props) {
 				displayIcon.current = "visible";
 			} else {
 				setClimber((val) => val + 1);
-				console.log("going", climber);
 				//increment and type out my name using the typing animation
 			}
 		}, 35);
@@ -65,7 +64,6 @@ function Main(props) {
 				} else {
 					changeOpacity((val) => val + 0.015); //0.0035
 					changeButtonOpacity((val) => val + 0.009); //0.0025
-					console.log("test", opacitySet);
 					//adding the opacity for the icon on top and button on bottom, this seems to be the most aesthetic result between the color difference
 				}
 			}, 5);
@@ -123,6 +121,7 @@ function Main(props) {
 				<div id='contact'>
 					<Contact />
 				</div>
+				<Footer />
 			</div>
 		</React.Fragment>
 	);

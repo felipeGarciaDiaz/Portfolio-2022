@@ -1,3 +1,3 @@
 import io from "socket.io-client";
-let socket = io();
+const socket = io.connect();
 export default socket;

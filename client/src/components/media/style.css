@@ -42,8 +42,21 @@
 		padding-bottom: 2%;
 		border-radius: 15px;
 
+		transform: scale(0.9);
+		transition: 0.4s ease-in-out;
+	}
+	#project-body:hover {
+
 		transform: scale(1);
 		transition: 0.4s ease-in-out;
+	}
+	#email-form, #phone-form, #name-form {
+	
+		background-color: #ececec;
+		border: none;
+		line-height: 10%;
+		padding: 0% 1%;
+		border-radius: 8px;
 	}
 }
 
@@ -245,14 +258,14 @@ body {
 		transform: scale(1);
 		transition: 0.4s ease-in-out;
 	}
+	#project-body:hover {
 
+		transform: scale(1.1);
+		transition: 0.4s ease-in-out;
+	}
 	
 }
-#project-body:hover {
 
-	transform: scale(1.1);
-	transition: 0.4s ease-in-out;
-}
 
 #project-title {
 	color: #FF006B;
@@ -266,6 +279,9 @@ body {
 
 
 }
+.inline-spacer {
+	color: #FFFFFF;
+}
 #project-link {
 	color: #FFC600;
 }
@@ -273,6 +289,11 @@ body {
 	text-decoration: underline;
 
 }
+
+#code-info {
+	display: inline-block;
+}
+
 #project-desc {
 	color: #FFFFFF;
 	font-family: 'Finlandica', sans-serif;
@@ -292,4 +313,83 @@ body {
 	display: inline-block;
 	padding: 60px;
 	transition: 0.25s ease-in-out;
+	margin-bottom: 2%;
+}
+#contact-form {
+	background-color:#11325c;
+	font-family: 'Raleway', sans-serif;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	border-radius: 15px;
+	
+
+}
+#contact-title {
+	color: #FF006B;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	
+}
+
+#email-form, #phone-form, #name-form {
+	
+	background-color: #ececec;
+	border: none;
+	line-height: 10%;
+	padding: 1% 1%;
+	border-radius: 8px;
+}
+#name-form {
+	width: 100%;
+	margin-bottom: 1%;
+}
+#email-form, #phone-form {
+	width: 50%;
+}
+#email-form:focus, #phone-form:focus, #name-form, #message-form {
+	outline-color: #A22CFF;
+}
+#message-form {
+	background-color: #ffffff;
+	color: #202020;
+	margin-top: 2%;
+	height: auto;
+	border-radius: 15px;
+	resize: none;
+	padding-left: 2%;
+	margin-bottom: 2%;
+}
+#submit-form {
+	margin-top: 3%;
+	border-radius: 10px;
+	background-color: #A22CFF;
+	color: #ffffff;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bolder;
+	text-align: center;
+	margin: auto;
+	padding: 1% 3% 1% 3%;
+	box-sizing: content-box;
+	border: none;
+	margin-bottom: 5%;
+}
+#sent-title {
+	color: #FF006B;
+	margin-top: 2%;
+}
+
+#sent-desc {
+	
+
+	color: #FFFFFF;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+#footer {
+	background-color: #FF006B;
+	color: #FFFFFF;
+	font-family: 'Raleway', sans-serif;
+	padding: 1% 1% 1% 1%;
+	margin-top: 7%;
 }

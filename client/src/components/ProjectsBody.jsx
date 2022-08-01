@@ -32,7 +32,7 @@ function ProjectsBody(props) {
 			title: "Net Nuke",
 			imgSource: netNukeLogo,
 			git: "https://github.com/felipeGarciaDiaz/netNuke",
-			link: 404,
+			link: "/404",
 			desc: "Net Nuke is a program that takes advantage of a WPA2 vulnerability in routers, allowing a user to remotely connect to a raspberry pi, and shut down a network without even being on that network using a deauth attack",
 			stack: "Python, Aircrack, Bluetooth, Raspberry Pi",
 		},
@@ -50,7 +50,7 @@ function ProjectsBody(props) {
 			title: "regex-forms",
 			imgSource: regexFormsLogo,
 			git: "https://github.com/felipeGarciaDiaz/nukeChat",
-			link: 404,
+			link: "/404",
 			desc: "An API I designed to allow handling form validation more securely, implement this API in your nodeJS server to validate forms using regular expressions to ensure users aren't inputting malicious data in your forms",
 			stack: "Javascript, API, NPM, NodeJS",
 		},
@@ -64,6 +64,7 @@ function ProjectsBody(props) {
 			stack: "Javascript, Phaser3, NodeJS, Express, MongoDB",
 		},
 	];
+
 	return (
 		<React.Fragment>
 			<div className='row'>
