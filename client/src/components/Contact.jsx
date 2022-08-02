@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import Bounce from "react-reveal/Bounce";
 
-import socket from "./socket";
+import socket from "./utils/socket";
 
 function Contact(props) {
 	let [isMessagePending, setIsMessagePending] = useState(true);
@@ -31,7 +31,6 @@ function Contact(props) {
 				"Thank you! I will review this message as soon as possible, and reach back to you. In the mean time, feel free to review my projects and my github!",
 		});
 
-		setShowButton("none");
 		setIsMessagePending(false);
 
 		event.preventDefault();
@@ -141,7 +140,7 @@ function Contact(props) {
 										}}
 										onClick={handleRetry}
 									>
-										Retry
+										Resend
 									</button>
 								</h5>
 							</div>

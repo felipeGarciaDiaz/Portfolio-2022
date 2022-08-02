@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 
 function Footer(props) {
 	let copyrightYear = useRef(new Date().getFullYear());

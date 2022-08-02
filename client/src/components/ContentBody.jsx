@@ -1,6 +1,6 @@
 import React from "react";
 import Bounce from "react-reveal/Bounce";
-import ContentBox from "./ContentBox";
+import ContentBox from "./utils/ContentBox";
 function ContentBody(props) {
 	return (
 		<React.Fragment>

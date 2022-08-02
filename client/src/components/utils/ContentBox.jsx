@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SkillData } from "./media/resources/data.js";
+import { SkillData } from "./data.js";
 import BarChart from "./BarChart";
 function ContentBox(props) {
 	const [skillData, setSkillData] = useState({

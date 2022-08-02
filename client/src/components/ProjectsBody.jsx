@@ -1,6 +1,6 @@
 import React from "react";
 import Bounce from "react-reveal/Bounce";
-import Projects from "./Projects";
+import Projects from "./utils/Projects";
 import netNukeLogo from "./media/resources/netNuke.png";
 import niicekreamLogo from "./media/resources/niicekream.png";
 import nukeChatLogo from "./media/resources/nukeChat.png";

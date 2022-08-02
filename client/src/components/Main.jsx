@@ -4,7 +4,7 @@ import Socials from "./Socials";
 import ProjectsBody from "./ProjectsBody";
 import ContentBody from "./ContentBody";
 import Contact from "./Contact";
-import Footer from "./Footer";
+import Footer from "./utils/Footer";
 function Main(props) {
 	//init hooks
 

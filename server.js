@@ -4,7 +4,7 @@ const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const nodemailer = require('nodemailer');
 const path = require('path');
-const regexforms = require("./regex-forms");
+const regexforms = require("regex-forms");
 //const crypto = require('crypto');
 PORT = 5503;
 
@@ -14,10 +14,10 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "client/public", "index.html"));
 });
 app.use("/resume", (req, res) => {
-    res.sendFile(path.join(__dirname, "FelipeGarciaDiazResume.pdf"));
+    res.sendFile(path.join(__dirname, "utils", "FelipeGarciaDiazResume.pdf"));
 })
 app.get("/404", (req, res) => {
-    res.sendFile(path.join(__dirname, "404.html"));
+    res.sendFile(path.join(__dirname, "utils", "404.html"));
 });
 
 let transporter = nodemailer.createTransport({
@@ -29,7 +29,7 @@ let transporter = nodemailer.createTransport({
         user: "felupoke@yahoo.com",
         pass: "password"
     },
-    debug: true,
+    debug: false,
     logger: true,
 })
 io.on("connection", (socket) => {
