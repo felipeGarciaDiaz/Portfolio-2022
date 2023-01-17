@@ -26,8 +26,8 @@ let transporter = nodemailer.createTransport({
     service: "yahoo",
     secure: false,
     auth: {
-        user: "felupoke@yahoo.com",
-        pass: "urilvcrfoekgozvm"   //urilvcrfoekgozvm
+        user: "email@email.com",
+        pass: "password"
     },
     debug: true,
     logger: true,
