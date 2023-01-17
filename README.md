@@ -5,6 +5,7 @@ Website showcasing who I am, what I'm passionate about, and what I have develope
 - HTML5
 - CSS3
 - MaterializeCSS
+- Javascript
 - ReactJS
 - NodeJS
 - ExpressJS
