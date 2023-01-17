@@ -8,7 +8,7 @@ function ContentBox(props) {
 			{
 				label: "My Skills",
 				data: SkillData.map((data) => data.skillMastered),
-				backgroundColor: ["#ff008c", "#590696", "#FBCB0A"],
+				backgroundColor: ["#0036A9", "#4882FF", "#3C60AD"],
 			},
 		],
 		legend: {

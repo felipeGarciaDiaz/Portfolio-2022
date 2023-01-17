@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Finlandica:ital@1&family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @media (max-width:600px) {
 	body {
@@ -15,7 +16,7 @@
 	}
 
 	.layer1 {
-		background-image: url('./resources/wave-phone.svg');
+		background-image: url('./resources/Phone-Waves.svg');
 		padding-bottom: 100%;
 	}
 
@@ -32,7 +33,7 @@
 		padding-top: 10%;
 	}
 	#project-body {
-		background-color: #0E1322;
+		background-color: #324d9e;
 		font-family: 'Raleway', sans-serif;
 		margin-top: 5%;
 		margin-left: 0%;
@@ -82,7 +83,7 @@ div {
 }
 
 body {
-	background-color: #19213d;
+	background-color: #FDF0E0;
 	overflow-x: hidden;
 
 }
@@ -104,7 +105,7 @@ body {
 }
 
 .layer1 {
-	background-image: url('./resources/wave-desktop.svg');
+	background-image: url('./resources/Desktop-Waves.svg');
 }
 
 #header {
@@ -188,10 +189,12 @@ body {
 
 #content-box {
 
-	background-color: #101629;
+	background-color: #324d9e;
 	color: #ffffff;
 	font-family: 'Raleway', sans-serif;
-	box-shadow: 5px 5px #090d1a;
+	box-shadow: 5px 5px #e6e6e6;
+	border-radius: 10px;
+	
 
 }
 
@@ -199,13 +202,15 @@ body {
 #libs-title {
 	padding-top: 2%;
 	color: #FFC600;
+	font-weight: bolder;
+
 }
 
 #content-desc,
 #libs-desc,
 #tools-desc {
 	font-size: 150%;
-	font-family: 'Finlandica', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 #profile {
@@ -216,13 +221,14 @@ body {
 
 #content-title-me,
 #tools-title {
-	color: #ff008c;
+	color: #FFC600;
+	font-weight: bolder;
 }
 
 
 .arrow {
 	margin-top: 10%;
-	border: solid white;
+	border: solid #4D4D4D;
 	border-width: 0 6px 6px 0;
 	display: inline-block;
 	padding: 60px;
@@ -245,7 +251,7 @@ body {
 }
 @media(min-width:601px) {
 	#project-body {
-		background-color: #0E1322;
+		background-color: #324d9e;
 		font-family: 'Raleway', sans-serif;
 		margin-top: 5%;
 		margin-left: 6%;
@@ -268,14 +274,16 @@ body {
 
 
 #project-title {
-	color: #FF006B;
+	color: #FFC600;
+	font-weight: bolder;
 }
 #project-logo {
-	width: 150px;
-	height: 150px;
+	margin-top: 5%;
+	width: 100px;
+	height: 100px;
 }
 #project-code {
-	color: #A22CFF;
+	color: #ffffff;
 
 
 }
@@ -296,19 +304,19 @@ body {
 
 #project-desc {
 	color: #FFFFFF;
-	font-family: 'Finlandica', sans-serif;
+	font-family: 'Roboto', sans-serif;	
 	font-size: 30%;
 	padding-top: 5%;
 	padding-bottom: 5%;
 }
 #projects-stack {
 	color: #FFFFFF;
-	font-family: 'Finlandica', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	padding-bottom: 5%;
 }
 .arrow-contact {
 	margin-top: 2%;
-	border: solid white;
+	border: solid #4D4D4D;
 	border-width: 0 6px 6px 0;
 	display: inline-block;
 	padding: 60px;
@@ -316,7 +324,7 @@ body {
 	margin-bottom: 2%;
 }
 #contact-form {
-	background-color:#11325c;
+	background-color:#324d9e;
 	font-family: 'Raleway', sans-serif;
 	padding-top: 1%;
 	padding-bottom: 1%;
@@ -325,7 +333,7 @@ body {
 
 }
 #contact-title {
-	color: #FF006B;
+	color: #FFFFFF;
 	margin-top: 3%;
 	margin-bottom: 3%;
 	
@@ -347,7 +355,7 @@ body {
 	width: 50%;
 }
 #email-form:focus, #phone-form:focus, #name-form, #message-form {
-	outline-color: #A22CFF;
+	outline-color: #6db9ff;
 }
 #message-form {
 	background-color: #ffffff;
@@ -362,8 +370,8 @@ body {
 #submit-form {
 	margin-top: 3%;
 	border-radius: 10px;
-	background-color: #A22CFF;
-	color: #ffffff;
+	background-color: #FFC600;
+	color: #242424;
 	font-family: 'Raleway', sans-serif;
 	font-weight: bolder;
 	text-align: center;
@@ -387,7 +395,7 @@ body {
 }
 
 #footer {
-	background-color: #FF006B;
+	background-color: #2468c2;
 	color: #FFFFFF;
 	font-family: 'Raleway', sans-serif;
 	padding: 1% 1% 1% 1%;

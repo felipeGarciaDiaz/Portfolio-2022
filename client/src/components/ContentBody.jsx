@@ -39,7 +39,7 @@ function ContentBody(props) {
 								<h2 id='libs-title'>Libraries:</h2>
 								<p id='libs-desc'>
 									Phaser 3, ChartJS, ExpressJS, Socket.io, Bootstrap, MaterialUI,
-									Tailwind{" "}
+									Tailwind
 								</p>
 								<h2 id='tools-title'>Tools:</h2>
 								<p id='tools-desc'>

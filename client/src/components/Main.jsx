@@ -30,7 +30,7 @@ function Main(props) {
 			icon: "youtube",
 		},
 		{
-			link: "/resume",
+			link: "/resume/",
 			icon: "email",
 		},
 	];
@@ -43,6 +43,7 @@ function Main(props) {
 				displayIcon.current = "visible";
 			} else {
 				setClimber((val) => val + 1);
+				console.log("going", climber);
 				//increment and type out my name using the typing animation
 			}
 		}, 35);
@@ -64,6 +65,7 @@ function Main(props) {
 				} else {
 					changeOpacity((val) => val + 0.015); //0.0035
 					changeButtonOpacity((val) => val + 0.009); //0.0025
+					console.log("test", opacitySet);
 					//adding the opacity for the icon on top and button on bottom, this seems to be the most aesthetic result between the color difference
 				}
 			}, 5);

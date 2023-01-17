@@ -27,9 +27,9 @@ let transporter = nodemailer.createTransport({
     secure: false,
     auth: {
         user: "felupoke@yahoo.com",
-        pass: "password"
+        pass: "urilvcrfoekgozvm"   //urilvcrfoekgozvm
     },
-    debug: false,
+    debug: true,
     logger: true,
 })
 io.on("connection", (socket) => {

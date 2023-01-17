@@ -4,8 +4,12 @@ function Projects(props) {
 	return (
 		<React.Fragment>
 			<h1 className='center-align'>
-				<div id='project-body' className='col s12 m5 l3 center-align'>
-					<h3 id='project-title'> &lt; {props.title} /&gt;</h3>
+				<div id='project-body' className='col s12 m3 l3 center-align'>
+					<h3 id='project-title'>
+						{" "}
+						<span id='bracket-style'>&lt;</span> {props.title}{" "}
+						<span id='bracket-style'>/&gt;</span>
+					</h3>
 					<img
 						id='project-logo'
 						className='responsive-img'

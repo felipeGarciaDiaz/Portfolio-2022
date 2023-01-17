@@ -29,5 +29,15 @@ export const SkillData = [
         skill: 'Python', 
         skillMastered: 85, 
     },
+    {
+        id: 7, 
+        skill: 'PHP', 
+        skillMastered: 75, 
+    },
+    {
+        id: 8, 
+        skill: 'MySQL', 
+        skillMastered: 95, 
+    },
 
 ];
